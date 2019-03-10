@@ -65,3 +65,8 @@ __I used merg funtion to make the master data set df by joining the three data s
 __I used merg funtion to calculate the dog stages column from the four columns__
 
 
+# shots 
+
+https://github.com/mostafaGwely/Data-Wrangling/blob/master/act_report.pdf
+
+
