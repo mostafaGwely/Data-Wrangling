@@ -1,5 +1,5 @@
 # Data-Wrangling
-data wrangling on we rate dogs data set from twitter 
+data wrangling on a we-rate-dogs dataset from twitter
 
 # introduction
 
@@ -8,41 +8,41 @@ I wrangled the data in the wrangle_act.ipynb, and the wrangling process included
 
 # 1-data gathering
 
-- i downloaded the data set twitter_archive_enhanced.csv provided in the workspace
-- then gathering the tweets data set using twitter api tweepy
+- I downloaded the data set twitter_archive_enhanced.csv provided in the workspace
+- then gathering the tweets data set using twitter API tweepy
 - then gathering the image_predictions.tsv provided in the workspace
 
 # 2-data assessing
 
 ### -quality
 
-twitter enchanced archive data set twEnArch twitter_archive_enhanced
+Twitter enhanced archive data set twEnArch twitter_archive_enhanced
 
 - there is decimal rating and the numerator column is int instead of float
-- wrong rating numeratores were extracted from the text column
+- wrong rating numerators were extracted from the text column
 - there is no need of column denominator (we add scale to numerator column header )
 - null values in retweets columns
 - source column need to reformating
 - timestamp data type to date
 - in_replay_to status id and user id columns need to be converted to appropriate data type
-- breeds of the dog is inaccurate
+- breeds of the dog are inaccurate
 - name columns have null values and misleading values like `a`
 
 ### -tidiness
 
-- there are three data sets insead of one master data set
+- there are three data sets instead of one master data set
 - dog type can be represented in one column instead of three
 
 ### note :
 
-there are more quality issues but i choose just 8
+there are more quality issues but I choose just 8
 
 # 3-cleaning data
 
 - there is decimal rating and the numerator column is int instead of float 
 __i converted the data type to float__
-- wrong rating numeratores were extracted from the text column
-__I reproduced the rating from the text using regx then__
+- wrong rating numerators were extracted from the text column
+__I reproduced the rating from the text using regex then__
 - there is no need of column denominator (we add scale to numerator column header ) 
 __I added teh scale to the numerator column header then removed the rating_denominator column__
 - null values in retweets columns
@@ -58,14 +58,14 @@ __i removed the rows which have inaccurate breeds types__
 - name columns have null values and misleading values like ’a’
 __I re_extract the name of the dog from the text usin regex then replace it__
 
-- there are three data sets insead of one master data set
-__I used merg funtion to make the master data set df by joining the three data sets twEnArch , imPredictions , tweets__
+- there are three data sets instead of one master data set
+__I used merge function to make the master data set df by joining the three data sets twEnArch, predictions, tweets__
 
-- dog type can be represented in one column dog_stages instead of four doggo floofer pupper puppo
-__I used merg funtion to calculate the dog stages column from the four columns__
+- dog type can be represented in one column dog_stages instead of four doggo floofer pupper Puppo
+__I used merge function to calculate the dog stages column from the four columns__
 
 
-# shots 
+# Shots 
 
 https://github.com/mostafaGwely/Data-Wrangling/blob/master/act_report.pdf
 
